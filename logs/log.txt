@@ -1,0 +1,8 @@
+2019-12-18 13:51:52 WARN  ConnectionUtil:23 - Unable to obtain connection to database
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:21)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:62)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:67)
