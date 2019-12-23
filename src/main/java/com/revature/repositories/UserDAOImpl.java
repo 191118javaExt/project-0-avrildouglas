@@ -24,7 +24,7 @@ public class UserDAOImpl implements UserDAO{
 		
 		try (Connection conn = ConnectionUtil.getConnection()) {
 
-			String sql = "SELECT * FROM user;";
+			String sql = "SELECT * FROM bankdb.users;";
 
 			Statement stmt = conn.createStatement();
 			
@@ -34,12 +34,17 @@ public class UserDAOImpl implements UserDAO{
 				int id = rs.getInt("user_id");
 				String first_name = rs.getString("first_name");
 				String last_name = rs.getString("last_name");
-				String user_name = rs.getString("user_name");
-				int password = rs.getInt("password");
+//				String street = rs.getString ("street");
+//				String city = rs.getString("city");
+//				String state = rs.getString("state");
+//				String zip = rs.getString("zip");
+				String user_name = rs.getString("user_name");					
+				String password = rs.getString("password");
 							
-				User u = new User(id, first_name, last_name, user_name, password);
-					
+				User u = new User(id, first_name, last_name, user_name, password);					
+		
 				list.add(u);
+
 			}
 			
 			rs.close();
@@ -53,7 +58,7 @@ public class UserDAOImpl implements UserDAO{
 
 	@Override
 	public User findById(int id) {
-		// TODO Auto-generated method stub
+	
 		return null;
 	}
 
@@ -61,14 +66,14 @@ public class UserDAOImpl implements UserDAO{
 	public boolean insert(User u) {
 		try (Connection conn = ConnectionUtil.getConnection()) {
 	
-			String sql = "INSERT INTO user (user_name, first_name, last_name, password) " +
+			String sql = "INSERT INTO bankdb.users (first_name, last_name, user_name, password) " +
 					"VALUES (?, ?, ?, ?);";
 
 			PreparedStatement stmt = conn.prepareStatement(sql);
-			stmt.setString(2, u.getFirst_name());
-			stmt.setString(3, u.getLast_name());
-			stmt.setString(1, u.getUser_name());
-			stmt.setInt(4, u.getPassword());
+			stmt.setString(2, u.getLast_name());
+			stmt.setString(3, u.getUser_name());
+			stmt.setString(1, u.getFirst_name());
+			stmt.setString(4, u.getPassword());
 			
 			if(!stmt.execute()) {
 				return false;
@@ -82,10 +87,27 @@ public class UserDAOImpl implements UserDAO{
 	}
 
 	@Override
-	public boolean update(User e) {
-		// TODO Auto-generated method stub
+	public boolean update(User u) {
+		try (Connection conn = ConnectionUtil.getConnection()) {
+			
+
+			String sql = "UPDATE bankdb.users SET user_name = ?, password = ? WHERE user_id = user_id;";
+			
+			
+			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1, u.getUser_name());
+			stmt.setString(4, u.getPassword());
+			
+			if(!stmt.execute()) {
+				return false;
+			}
+		} catch(SQLException ex) {
+			logger.warn("Unable to update user", ex);
 			return false;
 		}
+		
+		return true;
+	}
 
 	}
 

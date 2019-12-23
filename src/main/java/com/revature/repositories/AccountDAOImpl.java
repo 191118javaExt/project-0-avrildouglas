@@ -31,10 +31,12 @@ public class AccountDAOImpl implements AccountDAO {
 	
 			while(rs.next()) {
 				int account_id = rs.getInt("account_id");
+				String account_num = rs.getString("account_num");
+				Double account_bal = rs.getDouble("account_bal");
 				String account_descrip = rs.getString("account_descrip");
 			
 				
-				Account a = new Account(account_id, account_descrip);
+				Account a = new Account(account_id, account_num, account_bal, account_descrip);
 			
 				
 				list.add(a);
@@ -59,10 +61,12 @@ public class AccountDAOImpl implements AccountDAO {
 	public boolean insert(Account a) {
 		try (Connection conn = ConnectionUtil.getConnection()) {
 			
-			String sql = "INSERT INTO accounts (account_descrip) " +
-					"VALUES (?);";
+			String sql = "INSERT INTO accounts (account_num, account_bal, account_descrip) " +
+					"VALUES (?,?,?);";
 
 			PreparedStatement stmt = conn.prepareStatement(sql);
+			stmt.setString(1, a.getAccount_num());
+			stmt.setDouble(1, a.getAccount_bal());
 			stmt.setString(1, a.getAccount_descrip());
 	
 			if(!stmt.execute()) {

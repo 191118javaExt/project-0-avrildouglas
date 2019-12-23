@@ -6,6 +6,11 @@ public class Role {
 	private String role_title;
 	private int role_permit;
 	
+	
+	public Role() {
+		super();
+	}
+
 	public Role(int id, String role_title, int role_permit) {
 		super();
 		this.id = id;

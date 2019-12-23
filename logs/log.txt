@@ -6,3 +6,321 @@ java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:
 	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:62)
 	at com.revature.services.UserService.insert(UserService.java:28)
 	at com.revature.Driver.main(Driver.java:67)
+2019-12-20 18:39:41 WARN  ConnectionUtil:23 - Unable to obtain connection to database
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:21)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:62)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-20 18:44:29 WARN  ConnectionUtil:23 - Unable to obtain connection to database
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:21)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:62)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-20 18:47:19 WARN  ConnectionUtil:23 - Unable to obtain connection to database
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:21)
+	at com.revature.repositories.UserDAOImpl.findAll(UserDAOImpl.java:25)
+	at com.revature.services.UserService.findAll(UserService.java:24)
+	at com.revature.Driver.main(Driver.java:111)
+2019-12-20 18:49:03 WARN  ConnectionUtil:23 - Unable to obtain connection to database
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:21)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:62)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-20 21:11:39 WARN  ConnectionUtil:23 - Unable to obtain connection to database
+java.sql.SQLException: No suitable driver found for jdbc:postgresql://localhost:5432/
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:21)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:62)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-20 21:51:38 WARN  ConnectionUtil:23 - Unable to obtain connection to database
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:291)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:108)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
+	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
+	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:30)
+	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+	at org.postgresql.Driver.makeConnection(Driver.java:393)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:21)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:62)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-20 22:09:18 WARN  ConnectionUtil:23 - Unable to obtain connection to database
+org.postgresql.util.PSQLException: FATAL: password authentication failed for user "postgres"
+	at org.postgresql.core.v3.ConnectionFactoryImpl.doAuthentication(ConnectionFactoryImpl.java:520)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:141)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:192)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:49)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:211)
+	at org.postgresql.Driver.makeConnection(Driver.java:458)
+	at org.postgresql.Driver.connect(Driver.java:260)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:21)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:62)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-20 22:14:32 WARN  UserDAOImpl:77 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "user"
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:73)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-20 22:58:47 WARN  UserDAOImpl:77 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "user"
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:73)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-20 23:02:36 WARN  UserDAOImpl:78 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "user"
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:74)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-20 23:05:09 WARN  UserDAOImpl:77 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "user"
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:73)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-22 14:44:41 WARN  UserDAOImpl:85 - Unable to retrieve all users
+org.postgresql.util.PSQLException: The column index is out of range: 5, number of columns: 4.
+	at org.postgresql.core.v3.SimpleParameterList.bind(SimpleParameterList.java:53)
+	at org.postgresql.core.v3.SimpleParameterList.setNull(SimpleParameterList.java:130)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.setString(AbstractJdbc2Statement.java:1300)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.setString(AbstractJdbc2Statement.java:1289)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:76)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-22 14:46:56 WARN  UserDAOImpl:85 - Unable to retrieve all users
+org.postgresql.util.PSQLException: No value specified for parameter 8.
+	at org.postgresql.core.v3.SimpleParameterList.checkAllParametersSet(SimpleParameterList.java:178)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:246)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:81)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-22 14:50:06 WARN  UserDAOImpl:85 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "user"
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:81)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:103)
+2019-12-22 15:29:55 WARN  UserDAOImpl:85 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: syntax error at or near "user"
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:81)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:116)
+2019-12-22 15:38:40 WARN  UserDAOImpl:85 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: relation "users" does not exist
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:81)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:116)
+2019-12-22 15:47:07 WARN  ConnectionUtil:23 - Unable to obtain connection to database
+org.postgresql.util.PSQLException: FATAL: database "bankdb" does not exist
+	at org.postgresql.core.v3.ConnectionFactoryImpl.readStartupMessages(ConnectionFactoryImpl.java:469)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:112)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
+	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
+	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:30)
+	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+	at org.postgresql.Driver.makeConnection(Driver.java:393)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:21)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:66)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:116)
+2019-12-22 15:51:30 WARN  ConnectionUtil:23 - Unable to obtain connection to database
+org.postgresql.util.PSQLException: FATAL: database "bankdb" does not exist
+	at org.postgresql.core.v3.ConnectionFactoryImpl.readStartupMessages(ConnectionFactoryImpl.java:469)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:112)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:66)
+	at org.postgresql.jdbc2.AbstractJdbc2Connection.<init>(AbstractJdbc2Connection.java:125)
+	at org.postgresql.jdbc3.AbstractJdbc3Connection.<init>(AbstractJdbc3Connection.java:30)
+	at org.postgresql.jdbc3g.AbstractJdbc3gConnection.<init>(AbstractJdbc3gConnection.java:22)
+	at org.postgresql.jdbc4.AbstractJdbc4Connection.<init>(AbstractJdbc4Connection.java:30)
+	at org.postgresql.jdbc4.Jdbc4Connection.<init>(Jdbc4Connection.java:24)
+	at org.postgresql.Driver.makeConnection(Driver.java:393)
+	at org.postgresql.Driver.connect(Driver.java:267)
+	at java.sql.DriverManager.getConnection(DriverManager.java:664)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:21)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:66)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:116)
+2019-12-22 15:58:02 WARN  ConnectionUtil:23 - Unable to obtain connection to database
+java.sql.SQLException: No suitable driver found for jdbc:postgresql/bankdb://localhost:5432/
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at com.revature.util.ConnectionUtil.getConnection(ConnectionUtil.java:21)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:66)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:116)
+2019-12-22 15:59:33 WARN  UserDAOImpl:85 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: relation "users" does not exist
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2102)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:1835)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:257)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:500)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.executeWithFlags(AbstractJdbc2Statement.java:388)
+	at org.postgresql.jdbc2.AbstractJdbc2Statement.execute(AbstractJdbc2Statement.java:381)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:81)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:116)
+2019-12-22 16:14:52 WARN  UserDAOImpl:85 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: relation "users" does not exist
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:81)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:116)
+2019-12-22 16:20:20 WARN  UserDAOImpl:86 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: relation "users" does not exist
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:82)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:116)
+2019-12-22 16:25:10 WARN  UserDAOImpl:86 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: relation "users" does not exist
+  Position: 13
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:82)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:116)
+2019-12-22 17:16:14 WARN  UserDAOImpl:86 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: column "zip" is of type integer but expression is of type character varying
+  Hint: You will need to rewrite or cast the expression.
+  Position: 129
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:82)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:117)
+2019-12-22 17:18:25 WARN  UserDAOImpl:86 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(2)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:82)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:117)
+2019-12-22 19:14:10 WARN  UserDAOImpl:86 - Unable to retrieve all users
+org.postgresql.util.PSQLException: ERROR: value too long for type character varying(2)
+	at org.postgresql.core.v3.QueryExecutorImpl.receiveErrorResponse(QueryExecutorImpl.java:2505)
+	at org.postgresql.core.v3.QueryExecutorImpl.processResults(QueryExecutorImpl.java:2241)
+	at org.postgresql.core.v3.QueryExecutorImpl.execute(QueryExecutorImpl.java:310)
+	at org.postgresql.jdbc.PgStatement.executeInternal(PgStatement.java:447)
+	at org.postgresql.jdbc.PgStatement.execute(PgStatement.java:368)
+	at org.postgresql.jdbc.PgPreparedStatement.executeWithFlags(PgPreparedStatement.java:158)
+	at org.postgresql.jdbc.PgPreparedStatement.execute(PgPreparedStatement.java:147)
+	at com.revature.repositories.UserDAOImpl.insert(UserDAOImpl.java:82)
+	at com.revature.services.UserService.insert(UserService.java:28)
+	at com.revature.Driver.main(Driver.java:117)
+2019-12-22 19:38:48 WARN  UserDAOImpl:107 - Unable to update user
+org.postgresql.util.PSQLException: The column index is out of range: 4, number of columns: 2.
+	at org.postgresql.core.v3.SimpleParameterList.bind(SimpleParameterList.java:64)
+	at org.postgresql.core.v3.SimpleParameterList.setNull(SimpleParameterList.java:162)
+	at org.postgresql.jdbc.PgPreparedStatement.setString(PgPreparedStatement.java:346)
+	at org.postgresql.jdbc.PgPreparedStatement.setString(PgPreparedStatement.java:335)
+	at com.revature.repositories.UserDAOImpl.update(UserDAOImpl.java:101)
+	at com.revature.services.UserService.update(UserService.java:32)
+	at com.revature.Driver.main(Driver.java:127)

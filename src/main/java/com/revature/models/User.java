@@ -5,14 +5,13 @@ public class User {
 	private String first_name;
 	private String last_name;
 	private String user_name;
-	private int password;
+	private String password;
 	
 	public User() {
 		super();
 	}
 
-	public User(int user_id, String first_name, String last_name, String user_name, int password) 
-	{
+	public User(int user_id, String first_name, String last_name, String user_name, String password) {
 		super();
 		this.user_id = user_id;
 		this.first_name = first_name;
@@ -53,11 +52,11 @@ public class User {
 		this.user_name = user_name;
 	}
 
-	public Integer getPassword() {
+	public String getPassword() {
 		return password;
 	}
 
-	public void setPassword(Integer password) {
+	public void setPassword(String password) {
 		this.password = password;
 	}
 
@@ -67,7 +66,7 @@ public class User {
 		int result = 1;
 		result = prime * result + ((first_name == null) ? 0 : first_name.hashCode());
 		result = prime * result + ((last_name == null) ? 0 : last_name.hashCode());
-		result = prime * result + password;
+		result = prime * result + ((password == null) ? 0 : password.hashCode());
 		result = prime * result + user_id;
 		result = prime * result + ((user_name == null) ? 0 : user_name.hashCode());
 		return result;
@@ -75,46 +74,44 @@ public class User {
 
 	@Override
 	public boolean equals(Object obj) {
-		if (this == obj) {
+		if (this == obj)
 			return true;
-		}
-		if (!(obj instanceof User)) {
+		if (obj == null)
 			return false;
-		}
+		if (getClass() != obj.getClass())
+			return false;
 		User other = (User) obj;
 		if (first_name == null) {
-			if (other.first_name != null) {
+			if (other.first_name != null)
 				return false;
-			}
-		} else if (!first_name.equals(other.first_name)) {
+		} else if (!first_name.equals(other.first_name))
 			return false;
-		}
+		if (last_name == null) {
+			if (other.last_name != null)
+				return false;
+		} else if (!last_name.equals(other.last_name))
+			return false;
 		if (password != other.password) {
 			return false;
 		}
-		if (user_id != other.user_id) {
+		if (user_id != other.user_id)
 			return false;
-		}
-		if (last_name == null) {
-			if (other.last_name != null) {
-				return false;
-			}
-		} else if (!last_name.equals(other.last_name)) {
-			return false;
-		}
 		if (user_name == null) {
-			if (other.user_name != null) {
+			if (other.user_name != null)
 				return false;
-			}
-		} else if (!user_name.equals(other.user_name)) {
+		} else if (!user_name.equals(other.user_name))
 			return false;
-		}
 		return true;
 	}
-	
+
 	@Override
 	public String toString() {
 		return "User [user_id=" + user_id + ", first_name=" + first_name + ", last_name=" + last_name + ", user_name="
 				+ user_name + ", password=" + password + "]";
 	}
+	
+	
+	
 }
+
+	

@@ -31,12 +31,13 @@ public class UserRoleDAOImpl implements UserRoleDAO{
 	
 			while(rs.next()) {
 				int id = rs.getInt("user_role_id");
+				String first_name = rs.getString("first_name");
+				String last_name = rs.getString("last_name");
 				String role_title = rs.getString("role_title");
-				int role_permit = rs.getInt("role_permit");
 									
-				UserRole r = new UserRole(id, role_title, role_permit);
+				UserRole ur = new UserRole(id, first_name, last_name, role_title);
 					
-				list.add(r);
+				list.add(ur);
 			}
 			
 			rs.close();
@@ -57,18 +58,19 @@ public class UserRoleDAOImpl implements UserRoleDAO{
 	public boolean insert(UserRole ur) {
 		try (Connection conn = ConnectionUtil.getConnection()) {
 			
-			String sql = "INSERT INTO user_roles (role_title, role_permit) " +
-					"VALUES (?, ?);";
+			String sql = "INSERT INTO user_roles (first_name, last_name, role_title) " +
+					"VALUES (?, ?, ?);";
 
 			PreparedStatement stmt = conn.prepareStatement(sql);
-			stmt.setString(1, ur.getRole_title());
-			stmt.setInt(2, ur.getRole_permit());
+			stmt.setString(1, ur.getFirst_name());
+			stmt.setString(2, ur.getLast_name());
+			stmt.setString(3, ur.getRole_title());
 			
 			if(!stmt.execute()) {
 				return false;
 			}
 		} catch(SQLException ex) {
-			logger.warn("Unable to retrieve all users", ex);
+			logger.warn("Unable to retrieve all users roles", ex);
 			return false;
 		}
 		

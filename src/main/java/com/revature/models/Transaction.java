@@ -9,6 +9,10 @@ public class Transaction {
 	private double trans_amount;
 	private Date trans_date;
 	
+	public Transaction() {
+		super();
+	}
+
 	public Transaction(int id, String trans_type, double trans_amount, Date trans_date) {
 		super();
 		this.id = id;

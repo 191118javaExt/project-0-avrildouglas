@@ -14,7 +14,7 @@ public class ConnectionUtil {
 		
 		String url = "jdbc:postgresql://localhost:5432/";
 		String username = "postgres";
-		String password = "password";
+		String password = "java07";
 		
 		Connection conn = null;
 		try {

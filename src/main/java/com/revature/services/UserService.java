@@ -28,12 +28,15 @@ public class UserService {
 		return repository.insert(u);
 	}
 	
-	public boolean login(String username, String password) {
-			//if(user_name == )		
-		return false;
-		
+	public boolean update(User u) {
+		return repository.update(u);
 	}
 	
-	
-	
+	public boolean login(String password) {
+		if ((password.length() < 8) || (password.length() > 12)) {	
+			System.out.println("Password should be at least 8 characters but no more that 12. Please re-enter password: ");
+			return false;
+		} 
+			return true;
+	}	
 }
